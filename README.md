@@ -29,3 +29,15 @@ You'll need an Heroku account to deploy the Express web app there.
 At this point, it should be available as both HTTPS and HTTP endpoints, such as:
 * https://mixed-content.herokuapp.com/
 * http://mixed-content.herokuapp.com/
+
+## Exercise 1
+
+Once the Express app is deployed, try to access it: `https://mixed-content.herokuapp.com/`
+
+- Look at the network tab in the browser's DevTools
+- What did you find?
+
+You should notice a few of things happening:
+- The main request to the page `https://hsts-express-example.herokuapp.com/` replies back with a `Strict-Transport-Security` security header.
+- The request to load the image `http://hsts-express-example.herokuapp.com/harley-davidson-zGzXsJUBQfs-unsplash.jpg` gets an internal browser redirect to its HTTPS version because the HSTS version does just that - it upgrades all requests to their HTTPS counterpart to load them securely.
+- The favicon from `http://http.rip/favicon.ico` is blocked from being loaded.
