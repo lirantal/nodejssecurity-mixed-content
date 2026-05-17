@@ -41,3 +41,7 @@ You should notice a few of things happening:
 - The main request to the page `https://hsts-express-example.herokuapp.com/` replies back with a `Strict-Transport-Security` security header.
 - The request to load the image `http://hsts-express-example.herokuapp.com/harley-davidson-zGzXsJUBQfs-unsplash.jpg` gets an internal browser redirect to its HTTPS version because the HSTS version does just that - it upgrades all requests to their HTTPS counterpart to load them securely.
 - The favicon from `http://http.rip/favicon.ico` is blocked from being loaded.
+
+## Contributing
+
+Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
